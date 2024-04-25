@@ -5,6 +5,9 @@ ARCH=$2
 SMP=$3
 PREEMPT=$4
 CC=$5
+KBUILD_BUILD_TIMESTAMP="Fri Jun 25 16:13:31 CST 2021"
+KBUILD_BUILD_USER="builder"
+KBUILD_BUILD_HOST="c4-miui-ota-bd110.bj"
 
 vecho() { [ "${quiet}" = "silent_" ] || echo "$@" ; }
 
