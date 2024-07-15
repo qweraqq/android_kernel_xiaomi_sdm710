@@ -230,7 +230,9 @@ output="/dev/stdout"
 output_file=""
 is_cpio_compressed=
 compr="gzip -n -9 -f"
-
+KBUILD_BUILD_TIMESTAMP="Fri Jun 25 16:13:31 CST 2021"
+KBUILD_BUILD_USER="builder"
+KBUILD_BUILD_HOST="c4-miui-ota-bd110.bj"
 arg="$1"
 case "$arg" in
 	"-l")	# files included in initramfs - used by kbuild
