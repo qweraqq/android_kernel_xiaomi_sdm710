@@ -372,8 +372,8 @@ show_map_vma(struct seq_file *m, struct vm_area_struct *vma, int is_pid)
 	dev_t dev = 0;
 	const char *name = NULL;
 
-        if (bypass_show_map_vma(vma) == 1)
-                return;
+	if (bypass_show_map_vma(vma) == 1)
+			return;
 
 	if (file) {
 		struct inode *inode = file_inode(vma->vm_file);
@@ -407,11 +407,6 @@ show_map_vma(struct seq_file *m, struct vm_area_struct *vma, int is_pid)
 	if (!name) {
 		if (!mm) {
 			name = "[vdso]";
-			goto done;
-		}
-
-		if ((flags & VM_EXEC)) {
-                        name = "[vdso]";
 			goto done;
 		}
 
@@ -829,7 +824,7 @@ static int show_smap(struct seq_file *m, void *v, int is_pid)
 	bool last_vma;
 
 	if (bypass_show_map_vma(vma) == 1)
-                return 0;
+        return 0;
 
 	if (priv->rollup) {
 		rollup_mode = true;
